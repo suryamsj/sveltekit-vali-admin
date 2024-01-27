@@ -5,15 +5,16 @@
 	onMount(async () => {
 		if (!browser) return;
 
-		// Login Page Flipbox control
-		let flipButton = document.querySelector('.login-content [data-toggle="flip"]');
+		let flipButtons = document.querySelectorAll('.login-content [data-toggle="flip"]');
 		let loginBox = document.querySelector('.login-box');
 
-		// @ts-ignore
-		flipButton.addEventListener('click', function (e) {
-			e.preventDefault();
-			loginBox?.classList.toggle('flipped');
-			return false;
+		flipButtons.forEach((flipButton) => {
+			// @ts-ignore
+			flipButton.addEventListener('click', function (e) {
+				e.preventDefault();
+				loginBox?.classList.toggle('flipped');
+				return false;
+			});
 		});
 	});
 </script>
