@@ -8,7 +8,6 @@
 
 <AppTitle title="Cards" desc="Material design inspired cards" iconTitle="bi bi-laptop" />
 
-
 <div class="row">
 	<div class="col-md-6">
 		<div class="tile">
@@ -43,8 +42,12 @@
 			<div class="tile-title-w-btn">
 				<h3 class="title">All Items</h3>
 				<div class="btn-group">
-					<a class="btn btn-primary" href="/" aria-label="item"><i class="bi bi-plus-square fs-5"></i></a>
-					<a class="btn btn-primary" href="/" aria-label="item"><i class="bi bi-pencil-square fs-5"></i></a>
+					<a class="btn btn-primary" href="/" aria-label="item"
+						><i class="bi bi-plus-square fs-5"></i></a
+					>
+					<a class="btn btn-primary" href="/" aria-label="item"
+						><i class="bi bi-pencil-square fs-5"></i></a
+					>
 					<a class="btn btn-primary" href="/" aria-label="item"><i class="bi bi-trash fs-5"></i></a>
 				</div>
 			</div>

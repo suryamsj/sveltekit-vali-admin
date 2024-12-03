@@ -1,8 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 
-	// Fungsi untuk memeriksa apakah suatu elemen menu aktif
 	let isActive = $derived((/** @type {any} */ item) => {
 		const currentPath = $page.url.pathname;
 		return (
@@ -128,38 +126,40 @@
 		}
 	];
 
-	onMount(async () => {
-		const treeviewMenu = document.querySelector('.app-menu');
+	$effect(() => {
+		(async () => {
+			const treeviewMenu = document.querySelector('.app-menu');
 
-		// Toggle Sidebar
-		// @ts-ignore
-		document.querySelector('[data-toggle="sidebar"]').addEventListener('click', function (event) {
-			event.preventDefault();
+			// Toggle Sidebar
 			// @ts-ignore
-			document.querySelector('.app').classList.toggle('sidenav-toggled');
-		});
-
-		// Activate sidebar treeview toggle
-		const treeviewToggleElements = document.querySelectorAll("[data-toggle='treeview']");
-		treeviewToggleElements.forEach(function (element) {
-			element.addEventListener('click', function (event) {
+			document.querySelector('[data-toggle="sidebar"]').addEventListener('click', function (event) {
 				event.preventDefault();
-				const parentElement = element.parentElement;
-
 				// @ts-ignore
-				if (!parentElement.classList.contains('is-expanded')) {
-					// @ts-ignore
-					var allTreeViewElements = treeviewMenu.querySelectorAll("[data-toggle='treeview']");
-					allTreeViewElements.forEach(function (treeviewElement) {
-						// @ts-ignore
-						treeviewElement.parentElement.classList.remove('is-expanded');
-					});
-				}
-
-				// @ts-ignore
-				parentElement.classList.toggle('is-expanded');
+				document.querySelector('.app').classList.toggle('sidenav-toggled');
 			});
-		});
+
+			// Activate sidebar treeview toggle
+			const treeviewToggleElements = document.querySelectorAll("[data-toggle='treeview']");
+			treeviewToggleElements.forEach(function (element) {
+				element.addEventListener('click', function (event) {
+					event.preventDefault();
+					const parentElement = element.parentElement;
+
+					// @ts-ignore
+					if (!parentElement.classList.contains('is-expanded')) {
+						// @ts-ignore
+						var allTreeViewElements = treeviewMenu.querySelectorAll("[data-toggle='treeview']");
+						allTreeViewElements.forEach(function (treeviewElement) {
+							// @ts-ignore
+							treeviewElement.parentElement.classList.remove('is-expanded');
+						});
+					}
+
+					// @ts-ignore
+					parentElement.classList.toggle('is-expanded');
+				});
+			});
+		})();
 	});
 </script>
 

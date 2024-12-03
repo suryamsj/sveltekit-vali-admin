@@ -51,7 +51,12 @@
 							>
 						</label>
 					</div>
-					<p class="semibold-text mb-2"><button style="background: none; border: none; text-decoration: underline; color: #00695c" data-toggle="flip">Forgot Password ?</button></p>
+					<p class="semibold-text mb-2">
+						<button
+							style="background: none; border: none; text-decoration: underline; color: #00695c"
+							data-toggle="flip">Forgot Password ?</button
+						>
+					</p>
 				</div>
 			</div>
 			<div class="mb-3 btn-container d-grid">
@@ -73,7 +78,10 @@
 			</div>
 			<div class="mb-3 mt-3">
 				<p class="semibold-text mb-0">
-					<button style="background: none; border: none; text-decoration: underline; color: #00695c" data-toggle="flip"><i class="bi bi-chevron-left me-1"></i> Back to Login</button>
+					<button
+						style="background: none; border: none; text-decoration: underline; color: #00695c"
+						data-toggle="flip"><i class="bi bi-chevron-left me-1"></i> Back to Login</button
+					>
 				</p>
 			</div>
 		</form>

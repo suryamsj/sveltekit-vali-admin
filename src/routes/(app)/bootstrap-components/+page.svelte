@@ -520,7 +520,8 @@
 			<h4>Alerts</h4>
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-warning">
-					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button>
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"
+					></button>
 					<h4>Warning!</h4>
 					<p>
 						Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra
@@ -536,18 +537,18 @@
 		<div class="col-lg-4">
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-danger">
-					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button><strong
-						>Oh snap!</strong
-					><a class="alert-link" href="#">Change a few things up</a> and try submitting again.
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"
+					></button><strong>Oh snap!</strong><a class="alert-link" href="#"
+						>Change a few things up</a
+					> and try submitting again.
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4">
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-success">
-					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button><strong
-						>Well done!</strong
-					>
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"
+					></button><strong>Well done!</strong>
 					You successfully read <a class="alert-link" href="#">this important alert message</a>.
 				</div>
 			</div>
@@ -555,9 +556,8 @@
 		<div class="col-lg-4">
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-info">
-					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button><strong
-						>Heads up!</strong
-					>
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"
+					></button><strong>Heads up!</strong>
 					This <a class="alert-link" href="#">alert needs your attention</a>, but it's not super
 					important.
 				</div>

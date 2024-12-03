@@ -109,7 +109,9 @@
 				</div>
 				<div class="sender">
 					<input type="text" placeholder="Send Message" />
-					<button class="btn btn-primary" type="button" aria-label="send"><i class="bi bi-send fs-5"></i></button>
+					<button class="btn btn-primary" type="button" aria-label="send"
+						><i class="bi bi-send fs-5"></i></button
+					>
 				</div>
 			</div>
 		</div>
