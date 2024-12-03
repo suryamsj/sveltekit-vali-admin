@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 
 	// Fungsi untuk memeriksa apakah suatu elemen menu aktif
-	$: isActive = (/** @type {any} */ item) => {
+	let isActive = $derived((/** @type {any} */ item) => {
 		const currentPath = $page.url.pathname;
 		return (
 			item.link === currentPath ||
@@ -12,7 +12,7 @@
 					(/** @type {{ link: string; }} */ subitem) => subitem.link === currentPath
 				))
 		);
-	};
+	});
 
 	const dataMenu = [
 		{
@@ -176,7 +176,7 @@
 			<p class="app-sidebar__user-designation">Frontend Developer</p>
 		</div>
 	</div>
-	<!-- svelte-ignore a11y-invalid-attribute -->
+	<!-- svelte-ignore a11y_invalid_attribute -->
 	<ul class="app-menu">
 		{#each dataMenu as item (item.label)}
 			{#if item.submenu}

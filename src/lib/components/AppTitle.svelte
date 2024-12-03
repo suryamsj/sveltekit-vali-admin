@@ -1,9 +1,8 @@
 <script>
 	import { page } from '$app/stores';
 
-	export let title = '';
-	export let desc = '';
-	export let iconTitle = '';
+	/** @type {{title?: string, desc?: string, iconTitle?: string}} */
+	let { title = '', desc = '', iconTitle = '' } = $props();
 
 	const url = $page.url.pathname;
 </script>

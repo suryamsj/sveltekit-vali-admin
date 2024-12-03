@@ -87,7 +87,7 @@
 				</div>
 				<div class="row d-print-none mt-2">
 					<div class="col-12 text-end">
-						<button class="btn btn-primary" on:click={() => window.print()}
+						<button class="btn btn-primary" onclick={() => window.print()}
 							><i class="bi bi-printer me-2"></i> Print</button
 						>
 					</div>

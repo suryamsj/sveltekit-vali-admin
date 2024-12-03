@@ -1,7 +1,6 @@
 <script>
+	import { browser } from '$app/environment';
 	import AppTitle from '$lib/components/AppTitle.svelte';
-	import * as echarts from 'echarts';
-	import { onMount } from 'svelte';
 
 	const salesData = {
 		xAxis: {
@@ -56,18 +55,24 @@
 		]
 	};
 
-	onMount(() => {
-		const salesChartElement = document.getElementById('salesChart');
-		const salesChart = echarts.init(salesChartElement, null, { renderer: 'svg' });
-		salesChart.setOption(salesData);
-		// @ts-ignore
-		new ResizeObserver(() => salesChart.resize()).observe(salesChartElement);
+	$effect(() => {
+		(async () => {
+			if (!browser) return;
 
-		const supportChartElement = document.getElementById('supportRequestChart');
-		const supportChart = echarts.init(supportChartElement, null, { renderer: 'svg' });
-		supportChart.setOption(supportRequests);
-		// @ts-ignore
-		new ResizeObserver(() => supportChart.resize()).observe(supportChartElement);
+			const echarts = await import('echarts');
+
+			const salesChartElement = document.getElementById('salesChart');
+			const salesChart = echarts.init(salesChartElement, null, { renderer: 'svg' });
+			salesChart.setOption(salesData);
+			// @ts-ignore
+			new ResizeObserver(() => salesChart.resize()).observe(salesChartElement);
+
+			const supportChartElement = document.getElementById('supportRequestChart');
+			const supportChart = echarts.init(supportChartElement, null, { renderer: 'svg' });
+			supportChart.setOption(supportRequests);
+			// @ts-ignore
+			new ResizeObserver(() => supportChart.resize()).observe(supportChartElement);
+		})();
 	});
 </script>
 

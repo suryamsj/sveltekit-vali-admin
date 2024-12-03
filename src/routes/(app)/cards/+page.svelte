@@ -8,7 +8,7 @@
 
 <AppTitle title="Cards" desc="Material design inspired cards" iconTitle="bi bi-laptop" />
 
-<!-- svelte-ignore a11y-invalid-attribute -->
+
 <div class="row">
 	<div class="col-md-6">
 		<div class="tile">
@@ -17,7 +17,7 @@
 				Hey there, I am a very simple card. I am good at containing small bits of information. I am
 				quite convenient because I require little markup to use effectively.
 			</div>
-			<div class="tile-footer"><a class="btn btn-primary" href="#">Link</a></div>
+			<div class="tile-footer"><a class="btn btn-primary" href="/">Link</a></div>
 		</div>
 	</div>
 	<div class="col-md-6">
@@ -25,7 +25,7 @@
 			<div class="tile-title-w-btn">
 				<h3 class="title">All Items</h3>
 				<p>
-					<a class="btn btn-primary icon-btn" href=""
+					<a class="btn btn-primary icon-btn" href="/"
 						><i class="bi bi-plus-square me-2"></i>Add Item
 					</a>
 				</p>
@@ -43,10 +43,9 @@
 			<div class="tile-title-w-btn">
 				<h3 class="title">All Items</h3>
 				<div class="btn-group">
-					<a class="btn btn-primary" href="#"><i class="bi bi-plus-square fs-5"></i></a><a
-						class="btn btn-primary"
-						href="#"><i class="bi bi-pencil-square fs-5"></i></a
-					><a class="btn btn-primary" href="#"><i class="bi bi-trash fs-5"></i></a>
+					<a class="btn btn-primary" href="/" aria-label="item"><i class="bi bi-plus-square fs-5"></i></a>
+					<a class="btn btn-primary" href="/" aria-label="item"><i class="bi bi-pencil-square fs-5"></i></a>
+					<a class="btn btn-primary" href="/" aria-label="item"><i class="bi bi-trash fs-5"></i></a>
 				</div>
 			</div>
 			<div class="tile-body">

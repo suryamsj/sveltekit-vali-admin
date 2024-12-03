@@ -3,7 +3,7 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Transition from '$lib/components/Transition.svelte';
 
-	export let data;
+	let { data, children } = $props();
 </script>
 
 <!-- Navbar -->
@@ -13,6 +13,6 @@
 <Sidebar />
 <main class="app-content">
 	<Transition key={data.pathname} duration={400}>
-		<slot />
+		{@render children()}
 	</Transition>
 </main>

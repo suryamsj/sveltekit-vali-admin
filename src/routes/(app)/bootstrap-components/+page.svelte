@@ -1,27 +1,28 @@
 <script>
 	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
 	import AppTitle from '$lib/components/AppTitle.svelte';
 
-	onMount(async () => {
-		if (!browser) return;
-		const bootstrap = await import('bootstrap');
+	$effect(() => {
+		(async () => {
+			if (!browser) return;
+			const bootstrap = await import('bootstrap');
 
-		// Enable all alerts on the page
-		const alertList = document.querySelectorAll('.alert');
-		const alerts = [...alertList].map((element) => new bootstrap.Alert(element));
+			// Enable all alerts on the page
+			const alertList = document.querySelectorAll('.alert');
+			const alerts = [...alertList].map((element) => new bootstrap.Alert(element));
 
-		// Enable all popovers on the page
-		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-		const popoverList = [...popoverTriggerList].map(
-			(popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
-		);
+			// Enable all popovers on the page
+			const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+			const popoverList = [...popoverTriggerList].map(
+				(popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+			);
 
-		// Enable all tooltips on the page
-		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-		const tooltipList = [...tooltipTriggerList].map(
-			(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-		);
+			// Enable all tooltips on the page
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+			const tooltipList = [...tooltipTriggerList].map(
+				(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+			);
+		})();
 	});
 </script>
 
@@ -78,6 +79,7 @@
 							data-bs-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false"
+							aria-label="dropdown"
 						></button>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="/bootstrap-components">Dropdown link</a>
@@ -95,6 +97,7 @@
 							data-bs-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false"
+							aria-label="dropdown"
 						></button>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="/bootstrap-components">Dropdown link</a>
@@ -112,6 +115,7 @@
 							data-bs-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false"
+							aria-label="dropdown"
 						></button>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="/bootstrap-components">Dropdown link</a>
@@ -129,6 +133,7 @@
 							data-bs-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false"
+							aria-label="dropdown"
 						></button>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="/bootstrap-components">Dropdown link</a>
@@ -318,10 +323,10 @@
 					<li class="nav-item">
 						<a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
 					</li>
-					<!-- svelte-ignore a11y-invalid-attribute -->
+					<!-- svelte-ignore a11y_invalid_attribute -->
 					<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
 					<li class="nav-item dropdown">
-						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y_invalid_attribute -->
 						<a
 							class="nav-link dropdown-toggle"
 							data-bs-toggle="dropdown"
@@ -383,10 +388,10 @@
 			<h3>Pills</h3>
 			<div class="bs-component">
 				<ul class="nav nav-pills">
-					<!-- svelte-ignore a11y-invalid-attribute -->
+					<!-- svelte-ignore a11y_invalid_attribute -->
 					<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
 					<li class="nav-item dropdown">
-						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y_invalid_attribute -->
 						<a
 							class="nav-link dropdown-toggle"
 							data-bs-toggle="dropdown"
@@ -410,7 +415,7 @@
 				</ul>
 			</div>
 			<br />
-			<!-- svelte-ignore a11y-invalid-attribute -->
+			<!-- svelte-ignore a11y_invalid_attribute -->
 			<div class="bs-component">
 				<ul class="nav nav-pills nav-stacked">
 					<li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
@@ -438,7 +443,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<!-- svelte-ignore a11y-invalid-attribute -->
+		<!-- svelte-ignore a11y_invalid_attribute -->
 		<div class="col-lg-6">
 			<h2 class="mb-3 line-head" id="nav-breadcrumbs">Breadcrumbs</h2>
 			<div class="bs-component">
@@ -460,7 +465,7 @@
 			<h2 class="mb-3 line-head" id="pagination">Pagination</h2>
 			<div class="bs-component">
 				<div>
-					<!-- svelte-ignore a11y-invalid-attribute -->
+					<!-- svelte-ignore a11y_invalid_attribute -->
 					<ul class="pagination">
 						<li class="page-item disabled"><a class="page-link" href="#">«</a></li>
 						<li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -472,7 +477,7 @@
 					</ul>
 				</div>
 				<div>
-					<!-- svelte-ignore a11y-invalid-attribute -->
+					<!-- svelte-ignore a11y_invalid_attribute -->
 					<ul class="pagination pagination-lg">
 						<li class="page-item disabled"><a class="page-link" href="#">«</a></li>
 						<li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -484,7 +489,7 @@
 					</ul>
 				</div>
 				<div>
-					<!-- svelte-ignore a11y-invalid-attribute -->
+					<!-- svelte-ignore a11y_invalid_attribute -->
 					<ul class="pagination pagination-sm">
 						<li class="page-item disabled"><a class="page-link" href="#">«</a></li>
 						<li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -501,7 +506,7 @@
 </div>
 
 <!-- Indicators-->
-<!-- svelte-ignore a11y-invalid-attribute -->
+<!-- svelte-ignore a11y_invalid_attribute -->
 <div class="tile mb-4">
 	<div class="row">
 		<div class="col-lg-12">
@@ -515,7 +520,7 @@
 			<h4>Alerts</h4>
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-warning">
-					<button class="btn-close" type="button" data-bs-dismiss="alert"></button>
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button>
 					<h4>Warning!</h4>
 					<p>
 						Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra
@@ -531,7 +536,7 @@
 		<div class="col-lg-4">
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-danger">
-					<button class="btn-close" type="button" data-bs-dismiss="alert"></button><strong
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button><strong
 						>Oh snap!</strong
 					><a class="alert-link" href="#">Change a few things up</a> and try submitting again.
 				</div>
@@ -540,7 +545,7 @@
 		<div class="col-lg-4">
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-success">
-					<button class="btn-close" type="button" data-bs-dismiss="alert"></button><strong
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button><strong
 						>Well done!</strong
 					>
 					You successfully read <a class="alert-link" href="#">this important alert message</a>.
@@ -550,7 +555,7 @@
 		<div class="col-lg-4">
 			<div class="bs-component">
 				<div class="alert alert-dismissible alert-info">
-					<button class="btn-close" type="button" data-bs-dismiss="alert"></button><strong
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button><strong
 						>Heads up!</strong
 					>
 					This <a class="alert-link" href="#">alert needs your attention</a>, but it's not super
@@ -745,7 +750,7 @@
 	</div>
 </div>
 
-<!-- svelte-ignore a11y-invalid-attribute -->
+<!-- svelte-ignore a11y_invalid_attribute -->
 <!-- Containers-->
 <div class="tile mb-4">
 	<div class="row">

@@ -51,22 +51,21 @@
 					</label>
 				</div>
 				<div class="btn-group">
-					<button class="btn btn-primary btn-sm" type="button"
+					<button class="btn btn-primary btn-sm" type="button" aria-label="trash"
 						><i class="bi bi-trash fs-5"></i></button
 					>
-					<button class="btn btn-primary btn-sm" type="button"
+					<button class="btn btn-primary btn-sm" type="button" aria-label="reply"
 						><i class="bi bi-reply fs-5"></i></button
 					>
-					<button class="btn btn-primary btn-sm" type="button"
+					<button class="btn btn-primary btn-sm" type="button" aria-label="share"
 						><i class="bi bi-share fs-5"></i></button
 					>
-					<button class="btn btn-primary btn-sm" type="button"
+					<button class="btn btn-primary btn-sm" type="button" aria-label="refresh"
 						><i class="bi bi-arrow-clockwise fs-5"></i></button
 					>
 				</div>
 			</div>
 			<div class="table-responsive mailbox-messages">
-				<!-- svelte-ignore a11y-invalid-attribute -->
 				<table class="table table-hover">
 					<tbody>
 						<tr>
@@ -78,7 +77,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td class="mail-subject"
 								><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -95,7 +96,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star-fill"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star-fill"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td
 								><b>A report on some good project</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -112,7 +115,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td class="mail-subject"
 								><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -129,7 +134,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star-fill"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star-fill"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td class="mail-subject"
 								><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -146,7 +153,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td class="mail-subject"
 								><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -163,7 +172,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star-fill"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star-fill"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td class="mail-subject"
 								><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -180,7 +191,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star-fill"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star-fill"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td class="mail-subject"
 								><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -197,7 +210,9 @@
 									</label>
 								</div>
 							</td>
-							<td><a href="#" on:click|preventDefault><i class="bi bi-star"></i></a></td>
+							<td>
+								<button aria-label="star"><i class="bi bi-star"></i></button>
+							</td>
 							<td><a href="read-mail.html">John Doe</a></td>
 							<td class="mail-subject"
 								><b>A report on project almanac</b> - Lorem ipsum dolor sit amet adipisicing elit...</td
@@ -211,10 +226,10 @@
 			<div class="text-end">
 				<span class="text-muted mr-2">Showing 1-15 out of 60</span>
 				<div class="btn-group ms-3">
-					<button class="btn btn-primary btn-sm" type="button"
+					<button class="btn btn-primary btn-sm" type="button" aria-label="prev"
 						><i class="bi bi-chevron-left"></i></button
 					>
-					<button class="btn btn-primary btn-sm" type="button"
+					<button class="btn btn-primary btn-sm" type="button" aria-label="next"
 						><i class="bi bi-chevron-right"></i></button
 					>
 				</div>

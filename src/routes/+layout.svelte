@@ -1,13 +1,16 @@
 <script>
-	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import '../app.scss';
 
-	onMount(async () => {
-		if (!browser) return;
+	let { children } = $props();
 
-		await import('bootstrap');
+	$effect(() => {
+		(async () => {
+			if (!browser) return;
+
+			import('bootstrap');
+		})();
 	});
 </script>
 
-<slot />
+{@render children()}

@@ -1,6 +1,6 @@
 <header class="app-header">
 	<a class="app-header__logo" href="/">Vali</a>
-	<!-- svelte-ignore a11y-invalid-attribute -->
+	<!-- svelte-ignore a11y_invalid_attribute -->
 	<!-- Sidebar toggle button--><a
 		class="app-sidebar__toggle"
 		href="#"
@@ -11,11 +11,11 @@
 	<ul class="app-nav">
 		<li class="app-search">
 			<input class="app-search__input" type="search" placeholder="Search" />
-			<button class="app-search__button"><i class="bi bi-search"></i></button>
+			<button class="app-search__button" aria-label="search"><i class="bi bi-search"></i></button>
 		</li>
 		<!--Notification Menu-->
 		<li class="dropdown">
-			<!-- svelte-ignore a11y-invalid-attribute -->
+			<!-- svelte-ignore a11y_invalid_attribute -->
 			<a class="app-nav__item" href="#" data-bs-toggle="dropdown" aria-label="Show notifications"
 				><i class="bi bi-bell fs-5"></i></a
 			>
@@ -94,7 +94,7 @@
 		</li>
 		<!-- User Menu-->
 		<li class="dropdown">
-			<!-- svelte-ignore a11y-invalid-attribute -->
+			<!-- svelte-ignore a11y_invalid_attribute -->
 			<a class="app-nav__item" href="#" data-bs-toggle="dropdown" aria-label="Open Profile Menu"
 				><i class="bi bi-person fs-4"></i></a
 			>
